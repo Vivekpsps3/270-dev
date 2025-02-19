@@ -1,89 +1,8 @@
-    Lab 3
-
-[![](./Lab 3_files/favicon270circle.png)](https://engineering.purdue.edu/ece270/)
-
-[
-
-About
-
-](https://engineering.purdue.edu/ece270/about)[
-
-Labs
-
-](https://engineering.purdue.edu/ece270/lab)[
-
-Notes
-
-](https://engineering.purdue.edu/ece270/notes)[
-
-References
-
-](https://engineering.purdue.edu/ece270/refs)
-
-* * *
-
 Lab 3
 =====
 
 Measurement of Electrical and Timing Characteristics of Logic Gates
 ===================================================================
-
-* * *
-
-Table of Contents
------------------
-
-  
-
-Step
-
-Description
-
-Points
-
-0
-
-Prelab
-
-25
-
-1
-
-Inverter Threshold Voltage Measurements
-
-12
-
-2
-
-Schmitt Inverter Voltage Threshold Measurements
-
-12
-
-3
-
-Circuit Construction and Test
-
-20
-
-4
-
-Propagation Delay Measurements
-
-31
-
-5
-
-Confirm checkoffs and clean up
-
-0\*
-
- 
-
-Total:
-
-100
-
-document.querySelector("table").classList.add("toc");  
 
 \* 25% penalty for late checkoffs, late postlab, bringing in liquids, or leaving an unclean/unusable station.
 
@@ -231,117 +150,7 @@ The truth table for the two outputs of the full adder can be easily derived usin
 
 For instance, if the A, B, Cin inputs are 1,0,1, the number of 1-bits in the input is 2. The binary representation of 2 is 10, so Cout=1 and S=0.
 
-A
-
-B
-
-Cin
-
-Sum
-
-Cout
-
-S
-
-0
-
-0
-
-0
-
-0
-
-0
-
-0
-
-0
-
-0
-
-1
-
-1
-
-0
-
-1
-
-0
-
-1
-
-0
-
-1
-
-0
-
-1
-
-0
-
-1
-
-1
-
-2
-
-1
-
-0
-
-1
-
-0
-
-0
-
-1
-
-0
-
-1
-
-1
-
-0
-
-1
-
-2
-
-1
-
-0
-
-1
-
-1
-
-0
-
-2
-
-1
-
-0
-
-1
-
-1
-
-1
-
-3
-
-1
-
-1
-
 The Boolean functions for this truth table is realized by the following circuit:
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/transform-and-or.png)
 
 Figure 5: Full Adder Schematic
 
@@ -362,19 +171,13 @@ so an OR gate with two inverted inputs is _(equivalent)_ to a NAND gate. The lef
 Typically, multiple one-bit full adders can be _(chained)_ together two form a multi-bit adder. This is done by dividing the binary addition into the 1's place, the 2's place, the 4's place, the 8's place, and so on for as many powers of two as needed. The carry-out from the 1's place is used as the carry-in for the 2's place. The carry-out from the 2's place is used as the carry-in for the 4's place.  
 A two-bit adder would be chained as shown below.
 
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/two-bit-adder.png)
-
 Figure 6: AND/OR/XOR implementation of Full Adder
 
 And, of course, we could replace the AND-OR tree with a NAND-NAND tree to form a circuit that can be built with the components in your digital parts kit.
 
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/two-bit-nand-adder.png)
-
 Figure 7: NAND/XOR implementation of Full Adder
 
 **The full schematic of the circuit to build for this lab is shown below.** Four buttons are used to provide the two two-bit inputs A1, A0 and B1,B0. The inputs are naturally in the "low" state unless a button is pressed to set them to the "high" state. The carry-in is held low by a pull-down resistor (you must use 10K ohm resistors). Points are labeled where the AD2 will be connected.
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/full-schematic.png)
 
 Figure 8: Full Schematic
 
@@ -423,8 +226,6 @@ Don't wire anything else yet. Apply a 4.5V power supply, and test this circuit w
 
 Wire adder "1" on the "upper" side of the chips exactly as the bottom side, but slide each wire to the right by one hole as shown in the figure below. (Remember that the logic gates on the "upper" side are one position to the left of the gates on the "lower" side.)
 
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/place-adder1.jpg)
-
 Figure 11: Full Adder 1
 
 You are expected to use the datasheets for each IC to build your circuit. Do not try to copy and paste the example wiring or you will run into issues. The figure underneath should be used for reference only. Click/tap to continue.
@@ -438,10 +239,6 @@ Add the LEDs for S1 and S2 (Cout1) to the upper adder as shown in the picture be
 Connect buttons B1 and A0 to their inputs with long green and orange wires. It may help to bend corners into the wires to keep them from looping around your breadboard.
 
 Apply 4.5V to the system, and test it thoroughly. If you press all four buttons (which represents a three on each input), you should see the green LEDs show the binary pattern 1 1 0, which represents the decimal quantity six. If you temporarily connect the Cin0 input to power, it will add one more of any of the combinations you try. With all buttons pressed (3 + 3) and Cin0 pulled high (+1) the end result should be all three green LEDs illuminated (a sum of 7).
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/place-leds.jpg)
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/full-schematic.png)
 
 Figure 12: Full Adder 1 Test
 
@@ -465,53 +262,12 @@ Before you use AutoLab to verify your circuit, make it a habit to check your cir
 
 First, connect the AD2 according to the following table:
 
-AD2 pin
-
-Adder
-
-DIO 0
-
-A0
-
-DIO 1
-
-A1
-
-DIO 2
-
-B0
-
-DIO 3
-
-B1
-
-DIO 4
-
-Cin0
-
-DIO 8
-
-S0
-
-DIO 9
-
-S1
-
-DIO 10
-
-S2
-
-DIO 11
-
-Cout0
 
 **Do not remove these connections - you'll need them for AutoLab as well.**
 
 Make sure WaveForms is still open, with the power supplies turned on, and open the StaticIO panel. You should see two rows of 8 LEDs, numbered 15 through 0. These correspond to each of the DIO pins on the AD2.
 
 Click on the DIO numbers that are associated with circuit inputs (A0, A1, B0, B1, Cin0) and change them to be Switches > Push/Pull. This allows you to set a value on those DIO pins without having to hold down a button.
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/staticio.png)
 
 Figure 13: StaticIO on WaveForms
 
@@ -541,8 +297,6 @@ Step 4: Propagation Delay Measurements
 --------------------------------------
 
 Consider a case where only buttons B1 and B0 are pressed. In such a case, only S1 and S0 are illuminated. While they are still pressed, if you press A0, it will cause S1 and S0 to turn off and S2 and Cout0 (yellow) to illuminate instead. This exercises a few long delay paths of the circuit, shown below.
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/path-delay.png)
 
 Figure 14: Delay paths
 
@@ -575,8 +329,6 @@ Press **"Run"** and you should see five traces.
 
 The order of signals added to the Logic tool is deliberate. You should see a trace that looks similar to the graph below.
 
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/logic-4.5v.png)
-
 Figure 14: Logic tool traces
 
 ### What are these slopes in the Logic tool trace?
@@ -597,13 +349,9 @@ Reduce the size of the undocked Logic tool to be just large enough to see the tr
 
 Connect the oscilloscope's probe 1 to the A0 signal, and ensure that its black alligator clip is connected to ground. Connect the the oscilloscope's probe 2 pin to the S2 signal, and ensure that its black alligator clip is also connected to ground.In WaveForms, change the frequency on DIO 0 to 50 kHz, and press Auto Scale on the oscilloscope. The result should look similar to the figure below.
 
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/scope-export-2.png)
-
 Figure 15: Oscilloscope view of 50 kHz signal
 
 Once you have verified that it looks similar, zoom in until you see the delay between the input waveform on A0 and the output waveform on S2. Using the Cursors tool, measure this delay by using the midpoint method as detailed in the lecture notes.It should be similar to the following.
-
-![If this diagram didn't appear, contact course staff.](./Lab 3_files/scope-export-2-2.png)
 
 Figure 16: Propagation delay measurement
 
@@ -621,11 +369,3 @@ Before leaving, confirm with a TA that you have completed the following steps:
 *   **Log out of your lab station so that you don't get a logout penalty.**
 
 **Make sure to confirm that you have received all checkoffs on the [Evaluation page](https://engineering.purdue.edu/ece270/submit/?item=lab3) for your lab section before leaving.** You must also confirm that you did not receive a 25% penalty for bringing in liquids, or leaving an unclean/unusable station. If you did, you must resolve the issue with your TA before leaving.
-
-* * *
-
-Questions or comments about the course and/or the content of these webpages should be sent to the [Course Webmaster](mailto:ece270@ecn.purdue.edu). All the materials on this site are intended solely for the use of students enrolled in ECE 270 at the West Lafayette Campus of Purdue University. Downloading, copying, or reproducing any of the copyrighted materials posted on this site (documents or videos) for anything other than educational purposes is forbidden.
-
-  
-
-if (localStorage.darkmode == "true") { document.documentElement.setAttribute("theme", "dark"); window.code\_theme = "vs-dark"; } else { document.documentElement.setAttribute("theme", "light"); window.code\_theme = "vs"; }
