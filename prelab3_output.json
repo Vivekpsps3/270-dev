@@ -1,0 +1,44 @@
+{
+    "student_name": "rpanchag",
+    "vt_plus": {
+        "typical": 2.0,
+        "min": 2.0,
+        "max": 2.0
+    },
+    "vt_minus": {
+        "typical": 2.0,
+        "min": 2.0,
+        "max": 2.0
+    },
+    "t_thl": {
+        "typical": 0.0,
+        "max": 0.0
+    },
+    "t_tlh": {
+        "typical": 0.0,
+        "max": 0.0
+    },
+    "t_phl": {
+        "typical": 0.0,
+        "max": 0.0
+    },
+    "t_plh": {
+        "typical": 0.0,
+        "max": 0.0
+    },
+    "t_3": {
+        "thl": 0.0,
+        "tlh": 0.0,
+        "phl": 0.0,
+        "plh": 0.0
+    },
+    "delays": {
+        "4_1": 0.0,
+        "4_2": 0.0,
+        "4_3": 0.0,
+        "4_4": 0.0,
+        "4_5": 0.0,
+        "4_6": 0.0,
+        "4_7": 0.0
+    }
+}
