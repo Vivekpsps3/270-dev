@@ -1,0 +1,21 @@
+{
+    "name": "",
+    "username": "",
+    "left_0": "",
+    "left_1": "",
+    "left_2": "pb[8]",
+    "left_3": "~pb[9]",
+    "left_4": "pb[4] & pb[5]",
+    "left_5": "pb[1] | pb[2] | pb[3]",
+    "f_ex": "assign f_ex = ~( ~w & ~y ) & ~( x & z );",
+    "f0": "",
+    "f1": "",
+    "f2": "",
+    "f3": "",
+    "right_0": "",
+    "right_1": "",
+    "right_2": "",
+    "blue": "",
+    "vote_instance_v2": "",
+    "vote_instance_v3": ""
+}
